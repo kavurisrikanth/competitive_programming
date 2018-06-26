@@ -7,18 +7,12 @@ public class ProductExcept {
 
         int[] ans = new int[intArray.length];
 
-        // for each integer, we find the product of all the integers
-        // before it, storing the total product so far each time
         int product = 1;
         for (int i = 0; i < intArray.length; i++) {
             ans[i] = product;
             product *= intArray[i];
         }
 
-        // for each integer, we find the product of all the integers
-        // after it. since each index in products already has the
-        // product of all the integers before it, now we're storing
-        // the total product of all other integers
         product = 1;
         for (int i = intArray.length - 1; i >= 0; i--) {
             ans[i] *= product;
