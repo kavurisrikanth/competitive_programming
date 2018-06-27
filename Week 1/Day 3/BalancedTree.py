@@ -21,6 +21,7 @@ def is_balanced(tree_root):
     if numLeaves == 1:
         return True
 
+
     return diff == -1 or diff == 0 or diff == 1
 
 
