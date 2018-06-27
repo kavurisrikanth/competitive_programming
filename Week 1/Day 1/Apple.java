@@ -34,22 +34,6 @@ public class Apple {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // tests
 
     @Test
@@ -98,7 +82,7 @@ public class Apple {
     }
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(Solution.class);
+        Result result = JUnitCore.runClasses(Apple.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }

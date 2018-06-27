@@ -1,3 +1,10 @@
+import org.junit.Test;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+import static org.junit.Assert.*;
+
 public class ProductExcept {
     public static int[] getProductsOfAllIntsExceptAtIndex(int[] intArray) {
 
@@ -81,7 +88,7 @@ public class ProductExcept {
     }
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(Solution.class);
+        Result result = JUnitCore.runClasses(ProductExcept.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }
