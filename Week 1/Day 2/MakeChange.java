@@ -12,7 +12,8 @@ public class MakeChange {
         if(len <= 0)
             return 0;
             
-        return changePossibilities(amount, denominations, len - 1) + changePossibilities(amount - denominations[len-1], denominations, len);
+        return changePossibilities(amount, denominations, len - 1) + 
+                changePossibilities(amount - denominations[len-1], denominations, len);
     }
 
 
