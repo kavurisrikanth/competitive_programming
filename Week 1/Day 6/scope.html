@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Scope</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var text = 'outside';
+		function logIt(){
+		    console.log(text);
+		    var text = 'inside';
+		};
+		logIt();
+	</script>
+</body>
+</html>
