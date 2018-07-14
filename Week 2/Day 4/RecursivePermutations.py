@@ -2,29 +2,29 @@ import unittest
 
 iters = 0
 
-# def get_permutations(string):
-#     # Generate all permutations of the input string
-#     # print('length: ' + str(len(string)))
-#     if len(string) <= 1:
-#         return {string}
-#
-#     ans = []
-#     for iter in range(len(string)):
-#         char = string[iter]
-#         smallers = get_permutations(string[0:iter] + string[iter+1:])
-#         # print(smallers)
-#
-#         for one in smallers:
-#             global iters
-#             iters += 1
-#             ans.append(char + one)
-#
-#     return set(ans)
+def get_permutations(string):
+    # Generate all permutations of the input string
+    # print('length: ' + str(len(string)))
+    if len(string) <= 1:
+        return {string}
+
+    ans = []
+    for iter in range(len(string)):
+        char = string[iter]
+        smallers = get_permutations(string[0:iter] + string[iter+1:])
+        # print(smallers)
+
+        for one in smallers:
+            global iters
+            iters += 1
+            ans.append(char + one)
+
+    return set(ans)
 
 
-def get_permutations(line):
-    if len(line) <= 0:
-        return {line}
+# def get_permutations(line):
+#     if len(line) <= 0:
+#         return {line}
 
 
 
